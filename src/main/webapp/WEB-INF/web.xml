@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <servlet>
+        <servlet-name>CheckImgServlet</servlet-name>
+        <servlet-class>xyz.xioaxin12.utils.CheckImgServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>xyz.xioaxin12.web.UserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddProductServlet</servlet-name>
+        <servlet-class>xyz.xioaxin12.web.AddProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>xyz.xioaxin12.web.ProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShoppingServlet</servlet-name>
+        <servlet-class>xyz.xioaxin12.web.ShoppingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>xyz.xioaxin12.web.OrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OnlinePayServlet</servlet-name>
+        <servlet-class>xyz.xioaxin12.web.OnlinePayServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CallBackServlet</servlet-name>
+        <servlet-class>xyz.xioaxin12.web.CallBackServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CallBackServlet</servlet-name>
+        <url-pattern>/callback</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OnlinePayServlet</servlet-name>
+        <url-pattern>/onlinePay</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/order</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShoppingServlet</servlet-name>
+        <url-pattern>/shopping</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/product</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddProductServlet</servlet-name>
+        <url-pattern>/addproduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckImgServlet</servlet-name>
+        <url-pattern>/checkimg</url-pattern>
+    </servlet-mapping>
+
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/500.jsp</location>
+    </error-page>
+</web-app>
